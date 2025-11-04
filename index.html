@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Penggabung Struk PDF</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/script.js" defer></script>
+
+        <!-- library untuk menggabungkan PDF -->
+        <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+        <!-- library untuk preview PDF -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+    </head>
+    <body>
+        <div id="upload-screen" class="screen active">
+            <h1>Gabungkan dan Preview Struk PDF</h1>
+            <p>Pilih beberapa pdf, lihat preview, dan gabungkan jadi satu file</p>
+
+            <label for="pdf-input" class="upload-button"> Upload files yang ingin digabungkan</label>
+
+            <input type="file" id="pdf-input" multiple accept="application/pdf" hidden />
+
+            <p id="file-status"></p>
+
+            <div id="thumbnail-container"></div>
+
+            <button id="merge-button">Gabungkan PDF</button>
+        </div>
+        <div id="preview-screen" class="screen">
+            <h1>Gabungkan dan Preview Struk PDF</h1>
+            <p>Preview</p>
+
+            <iframe id="pdf-preview" type="application/pdf"></iframe>
+
+            <button id="download-button">Download</button>
+            <button id="back-button" class="secondary-button">Gabung Lagi</button>
+        </div>
+    </body>
+</html>
