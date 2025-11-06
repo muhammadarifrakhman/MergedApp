@@ -212,7 +212,8 @@ function downloadPdf() {
     if (mergedPdfUrl) {
         const a = document.createElement('a');
         a.href = mergedPdfUrl;
-        a.download = 'Struk_Gabungan.pdf';
+        a.target = '_blank';
+        // a.download = 'Struk_Gabungan.pdf';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
